@@ -122,7 +122,7 @@ const mfe2Config = {
       filename: "remoteEntry.js",
       exposes: {
         Component: './projects/mfe2/src/app/app.component.ts',
-        Module: './projects/mfe2/src/app/flights/flights.module.ts'
+        Module: './projects/mfe2/src/app/bookings/bookings.module.ts'
       },
       shared: ["@angular/core", "@angular/common", "@angular/router"]
     }),

@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { FlightsSearchComponent } from './flights-search/flights-search.component';
+import { BookingsSearchComponent } from './bookings-search/bookings-search.component';
 
 export const FLIGHTS_ROUTES: Routes = [
     {
       path: 'flights-search',
-      component: FlightsSearchComponent
+      component: BookingsSearchComponent
     }
 ];

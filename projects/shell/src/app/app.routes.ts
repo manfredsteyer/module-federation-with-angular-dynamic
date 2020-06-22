@@ -24,6 +24,6 @@ export const APP_ROUTES: Routes = [
           remoteName: 'mfe2',
           exposedModule: 'Module'
         })
-        .then(m => m.FlightsModule)
+        .then(m => m.BookingsModule)
     },
 ];

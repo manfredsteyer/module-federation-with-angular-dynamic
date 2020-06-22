@@ -1,11 +1,10 @@
 import {Component, ViewChild, ViewContainerRef, Inject, Injector, ComponentFactoryResolver, OnInit} from '@angular/core';
 
-
 @Component({
-  selector: 'app-flights-search',
-  templateUrl: './flights-search.component.html'
+  selector: 'app-bookings-search',
+  templateUrl: './bookings-search.component.html'
 })
-export class FlightsSearchComponent {
+export class BookingsSearchComponent {
 
   @ViewChild('vc', { read: ViewContainerRef, static: true })
   viewContainer: ViewContainerRef;
