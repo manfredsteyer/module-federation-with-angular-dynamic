@@ -101,4 +101,55 @@ const mfe1Config = {
   mode: "production"
 };
 
-module.exports = [shellConfig, mfe1Config];
+const mfe2Config = {
+  entry: ["./projects/mfe2/src/polyfills.ts", "./projects/mfe2/src/main.ts"],
+  resolve: {
+    mainFields: ["browser", "module", "main"]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "dist/mfe2"),
+    port: 3000
+  },  
+  module: {
+    rules: [
+      { test: /\.ts$/, loader: "@ngtools/webpack" }
+    ]
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "mfe2",
+      library: { type: "var", name: "mfe2" },
+      filename: "remoteEntry.js",
+      exposes: {
+        Component: './projects/mfe2/src/app/app.component.ts',
+        Module: './projects/mfe2/src/app/flights/flights.module.ts'
+      },
+      shared: ["@angular/core", "@angular/common", "@angular/router"]
+    }),
+    new AotPlugin({
+      skipCodeGeneration: false,
+      tsConfigPath: "./projects/mfe2/tsconfig.app.json",
+      directTemplateLoading: true,
+      entryModule: path.resolve(
+        __dirname,
+        "./projects/mfe2/src/app/app.module#AppModule"
+      )
+    }),
+    new CopyPlugin([
+      { from: 'projects/mfe2/src/assets', to: 'assets' },
+    ]),    
+    new HtmlWebpackPlugin({
+      template: "./projects/mfe2/src/index.html"
+    })
+  ],
+  output: {
+    publicPath: "http://localhost:3001/",
+    filename: "[name].js",
+    path: __dirname + "/dist/mfe2",
+    chunkFilename: "[id].[chunkhash].js"
+  },
+  mode: "production"
+};
+
+
+module.exports = [shellConfig, mfe1Config, mfe2Config];
