@@ -8,22 +8,22 @@ export const APP_ROUTES: Routes = [
       component: HomeComponent,
       pathMatch: 'full'
     },
-    {
-      path: 'flights',
-      loadChildren: () => loadRemoteModule({
-          remoteEntry: 'http://localhost:3000/remoteEntry.js',
-          remoteName: 'mfe1',
-          exposedModule: 'Module'
-        })
-        .then(m => m.FlightsModule)
-    },
-    {
-      path: 'bookings',
-      loadChildren: () => loadRemoteModule({
-          remoteEntry: 'http://localhost:3001/remoteEntry.js',
-          remoteName: 'mfe2',
-          exposedModule: 'Module'
-        })
-        .then(m => m.BookingsModule)
-    },
+    // {
+    //   path: 'flights',
+    //   loadChildren: () => loadRemoteModule({
+    //       remoteEntry: 'http://localhost:3000/remoteEntry.js',
+    //       remoteName: 'mfe1',
+    //       exposedModule: 'Module'
+    //     })
+    //     .then(m => m.FlightsModule)
+    // },
+    // {
+    //   path: 'bookings',
+    //   loadChildren: () => loadRemoteModule({
+    //       remoteEntry: 'http://localhost:3001/remoteEntry.js',
+    //       remoteName: 'mfe2',
+    //       exposedModule: 'Module'
+    //     })
+    //     .then(m => m.BookingsModule)
+    // },
 ];

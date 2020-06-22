@@ -1,9 +1,7 @@
 <ul>
     <li><img src="../assets/angular.png" width="50"></li>
     <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/flights/flights-search">Flights</a></li>
-    <li><a routerLink="/bookings/flights-search">Bookings</a></li>
-
+    <li *ngFor="let mfe of microfrontends"><a [routerLink]="mfe.routePath">{{mfe.displayName}}</a></li>
 </ul>
 
 <router-outlet></router-outlet>

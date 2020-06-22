@@ -9,7 +9,6 @@ import { APP_ROUTES } from './app.routes';
 @NgModule({
   imports: [
     BrowserModule,
-    FlightsModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
   declarations: [

@@ -1,30 +1,26 @@
-import { Component, ViewChild, ViewContainerRef, ɵrenderComponent as renderComponent, Inject, Injector, ComponentFactoryResolver } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef, ɵrenderComponent as renderComponent, Inject, Injector, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { LookupService } from './microfrontends/lookup.service';
+import { Router } from '@angular/router';
+import { buildRoutes } from '../menu-utils';
+import { Microfrontend } from './microfrontends/microfrontend';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'shell';
+export class AppComponent implements OnInit {
 
-  @ViewChild('vc', { read: ViewContainerRef, static: true })
-  viewContainer: ViewContainerRef;
+  microfrontends: Microfrontend[] = [];
 
   constructor(
-    @Inject(Injector) private injector,
-    @Inject(ComponentFactoryResolver) private cfr) { }
+    private router: Router,
+    private lookupService: LookupService) {
+  }
 
-    home() {
-      this.viewContainer.clear();
-    }
-
-    async load() {
-      alert('not implemented yet!');
-      // const comp = await import('mfe1/Component').then(m => {
-      //   return m.AppComponent;
-      // });
-      // const factory = this.cfr.resolveComponentFactory(comp);
-      // this.viewContainer.createComponent(factory, null, this.injector);
-    }
+  async ngOnInit(): Promise<void> {
+    this.microfrontends = await this.lookupService.lookup();
+    const routes = buildRoutes(this.microfrontends);
+    this.router.resetConfig(routes);
+  }
 }
 
