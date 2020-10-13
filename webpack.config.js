@@ -43,6 +43,8 @@ const shellConfig = {
     })
   ],
   output: {
+    publicPath: 'http://localhost:5000/',
+    uniqueName: 'shell',
     filename: "[id].[name].js",
     path: __dirname + "/dist/shell",
     chunkFilename: "[id].[chunkhash].js"
@@ -71,8 +73,8 @@ const mfe1Config = {
       library: { type: "var", name: "mfe1" },
       filename: "remoteEntry.js",
       exposes: {
-        Component: './projects/mfe1/src/app/app.component.ts',
-        Module: './projects/mfe1/src/app/flights/flights.module.ts'
+        './Component': './projects/mfe1/src/app/app.component.ts',
+        './Module': './projects/mfe1/src/app/flights/flights.module.ts'
       },
       shared: ["@angular/core", "@angular/common", "@angular/router"]
     }),
@@ -94,6 +96,7 @@ const mfe1Config = {
   ],
   output: {
     publicPath: "http://localhost:3000/",
+    uniqueName: 'mfe1',
     filename: "[name].js",
     path: __dirname + "/dist/mfe1",
     chunkFilename: "[id].[chunkhash].js"
@@ -121,8 +124,8 @@ const mfe2Config = {
       library: { type: "var", name: "mfe2" },
       filename: "remoteEntry.js",
       exposes: {
-        Component: './projects/mfe2/src/app/app.component.ts',
-        Module: './projects/mfe2/src/app/bookings/bookings.module.ts'
+        './Component': './projects/mfe2/src/app/app.component.ts',
+        './Module': './projects/mfe2/src/app/bookings/bookings.module.ts'
       },
       shared: ["@angular/core", "@angular/common", "@angular/router"]
     }),
@@ -144,6 +147,7 @@ const mfe2Config = {
   ],
   output: {
     publicPath: "http://localhost:3001/",
+    uniqueName: 'mfe2',
     filename: "[name].js",
     path: __dirname + "/dist/mfe2",
     chunkFilename: "[id].[chunkhash].js"

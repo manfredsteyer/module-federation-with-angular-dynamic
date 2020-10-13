@@ -9,8 +9,8 @@ export class LookupService {
                 // For Loading
                 remoteEntry: 'http://localhost:3000/remoteEntry.js',
                 remoteName: 'mfe1',
-                exposedModule: 'Module',
-                
+                exposedModule: './Module',
+
                 // For Routing
                 displayName: 'Flights',
                 routePath: 'flights',
@@ -20,13 +20,13 @@ export class LookupService {
                 // For Loading
                 remoteEntry: 'http://localhost:3001/remoteEntry.js',
                 remoteName: 'mfe2',
-                exposedModule: 'Module',
-                
+                exposedModule: './Module',
+
                 // For Routing
                 displayName: 'Bookings',
                 routePath: 'bookings',
                 ngModuleName: 'BookingsModule'
-            }            
+            }
         ] as Microfrontend[]);
     }
 }
