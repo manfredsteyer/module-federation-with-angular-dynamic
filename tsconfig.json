@@ -10,15 +10,11 @@
     "module": "ES2020",
     "allowJs": true,
     "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es5",
+    "importHelpers": false,
+    "target": "ES2015",
     "lib": [
       "es2018",
       "dom"
     ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
   }
 }
