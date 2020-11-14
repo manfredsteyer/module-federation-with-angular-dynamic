@@ -28,7 +28,7 @@ function loadRemoteEntry(remoteEntry: string): Promise<void> {
         script.onload = () => {
             moduleMap[remoteEntry] = true;
             resolve(); // window is the global namespace
-        }
+        };
 
         document.body.append(script);
     });
@@ -36,7 +36,7 @@ function loadRemoteEntry(remoteEntry: string): Promise<void> {
 
 async function lookupExposedModule<T>(remoteName: string, exposedModule: string): Promise<T> {
       // Initializes the share scope. This fills it with known provided modules from this build and all remotes
-      await __webpack_init_sharing__("default");
+      await __webpack_init_sharing__('default');
       const container = window[remoteName] as Container; // or get the container somewhere else
       // Initialize the container, it may provide shared modules
 
@@ -46,11 +46,15 @@ async function lookupExposedModule<T>(remoteName: string, exposedModule: string)
       return Module as T;
 }
 
-export type LoadRemoteModuleOptions = { 
-    remoteEntry: string; 
-    remoteName: string; 
+export type LoadRemoteModuleOptions = {
+    remoteEntry: string;
+    remoteName: string;
     exposedModule: string
-}
+};
+
+
+
+
 
 export async function loadRemoteModule(options: LoadRemoteModuleOptions): Promise<any> {
     await loadRemoteEntry(options.remoteEntry);
