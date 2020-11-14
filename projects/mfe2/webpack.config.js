@@ -11,7 +11,6 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "mfe2",
-      library: { type: "var", name: "mfe2" },
       filename: "remoteEntry.js",
       exposes: {
         './Component': './projects/mfe2/src/app/app.component.ts',
