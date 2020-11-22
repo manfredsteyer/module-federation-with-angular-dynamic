@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LookupService } from '../microfrontends/lookup.service';
 import { Microfrontend } from '../microfrontends/microfrontend';
-import { LoadRemoteModuleOptions } from '../../federation-utils';
 
 @Component({
   selector: 'app-config',

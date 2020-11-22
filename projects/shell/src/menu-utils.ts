@@ -1,4 +1,4 @@
-import { loadRemoteModule } from './federation-utils';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
 import { Microfrontend } from './app/microfrontends/microfrontend';
 import { APP_ROUTES } from './app/app.routes';
