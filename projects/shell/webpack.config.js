@@ -21,9 +21,14 @@ module.exports = {
       ...sharedMappings.getAliases(),
     }
   },
+  experiments: {
+    outputModule: true
+  },
   plugins: [
     new ModuleFederationPlugin({
-      
+        
+        library: { type: "module" },
+
         // No remotes configured upfront anymore!
         remotes: { },
 

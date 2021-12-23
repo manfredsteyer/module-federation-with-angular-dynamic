@@ -7,8 +7,8 @@ export class LookupService {
         return Promise.resolve([
             {
                 // For Loading
+                type: 'module',
                 remoteEntry: 'http://localhost:3000/remoteEntry.js',
-                remoteName: 'mfe1',
                 exposedModule: './Module',
 
                 // For Routing
@@ -17,9 +17,9 @@ export class LookupService {
                 ngModuleName: 'FlightsModule'
             },
             {
-                // For Loading
+                // For 
+                type: 'module',
                 remoteEntry: 'http://localhost:3001/remoteEntry.js',
-                remoteName: 'mfe2',
                 exposedModule: './Module',
 
                 // For Routing

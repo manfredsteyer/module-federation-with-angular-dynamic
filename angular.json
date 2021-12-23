@@ -52,6 +52,7 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "shell:build",
+            "publicHost": "http://localhost:5000",
             "port": 5000,
             "extraWebpackConfig": "projects/shell/webpack.config.js"
           },
@@ -83,19 +84,6 @@
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/shell/webpack.config.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/shell/tsconfig.app.json",
-              "projects/shell/tsconfig.spec.json",
-              "projects/shell/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
@@ -161,6 +149,7 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "mfe1:build",
+            "publicHost": "http://localhost:3000",
             "port": 3000,
             "extraWebpackConfig": "projects/mfe1/webpack.config.js"
           },
@@ -192,19 +181,6 @@
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/mfe1/webpack.config.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/mfe1/tsconfig.app.json",
-              "projects/mfe1/tsconfig.spec.json",
-              "projects/mfe1/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
@@ -283,6 +259,7 @@
           "options": {
             "browserTarget": "mfe2:build",
             "extraWebpackConfig": "projects/mfe2/webpack.config.js",
+            "publicHost": "http://localhost:3001",
             "port": 3001
           },
           "configurations": {
@@ -313,19 +290,6 @@
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/mfe2/webpack.config.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/mfe2/tsconfig.app.json",
-              "projects/mfe2/tsconfig.spec.json",
-              "projects/mfe2/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
