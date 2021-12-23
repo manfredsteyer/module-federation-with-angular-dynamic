@@ -29,6 +29,11 @@
             "extraWebpackConfig": "projects/shell/webpack.config.js"
           },
           "configurations": {
+            "development": {
+              "optimization": false,
+              "buildOptimizer": false,
+              "sourceMap": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -57,11 +62,16 @@
             "extraWebpackConfig": "projects/shell/webpack.config.js"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "shell:build:development",
+              "extraWebpackConfig": "projects/shell/webpack.prod.config.js"
+            },
             "production": {
               "browserTarget": "shell:build:production",
               "extraWebpackConfig": "projects/shell/webpack.prod.config.js"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -126,6 +136,12 @@
             "extraWebpackConfig": "projects/mfe1/webpack.config.js"
           },
           "configurations": {
+            "development": {
+              "optimization": false,
+              "buildOptimizer": false,
+              "sourceMap": true
+            },
+
             "production": {
               "fileReplacements": [
                 {
@@ -154,11 +170,16 @@
             "extraWebpackConfig": "projects/mfe1/webpack.config.js"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "mfe1:build:development",
+              "extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
+            },
             "production": {
               "browserTarget": "mfe1:build:production",
               "extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -223,6 +244,12 @@
             "extraWebpackConfig": "projects/mfe2/webpack.config.js"
           },
           "configurations": {
+            "development": {
+              "optimization": false,
+              "buildOptimizer": false,
+              "sourceMap": true
+            },
+
             "production": {
               "fileReplacements": [
                 {
@@ -263,11 +290,16 @@
             "port": 3001
           },
           "configurations": {
+            "development": {
+              "browserTarget": "mfe2:build:development",
+              "extraWebpackConfig": "projects/mfe2/webpack.prod.config.js"
+            },
             "production": {
               "browserTarget": "mfe2:build:production",
               "extraWebpackConfig": "projects/mfe2/webpack.prod.config.js"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
