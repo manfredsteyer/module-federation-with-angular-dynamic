@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { APP_ROUTES } from './app.routes';
-import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   imports: [
@@ -14,7 +13,6 @@ import { ConfigComponent } from './config/config.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ConfigComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
