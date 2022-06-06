@@ -1,6 +1,8 @@
+import { getManifest, Manifest } from '@angular-architects/module-federation';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { buildRoutes } from '../menu-utils';
+import { CustomManifest, CustomRemoteConfig } from './utils/config';
+import { buildRoutes } from './utils/routes';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +10,21 @@ import { buildRoutes } from '../menu-utils';
 })
 export class AppComponent implements OnInit  {
 
+  remotes: CustomRemoteConfig[] = [];
+
   constructor(
     private router: Router) {
   }
 
   async ngOnInit(): Promise<void> {
-    // const routes = buildRoutes(this.microfrontends);
-    // this.router.resetConfig(routes);
+    const manifest = getManifest() as CustomManifest;
+    
+    // Hint: Move this to an APP_INITIALIZER 
+    //  to avoid issues with deep linking
+    const routes = buildRoutes(manifest);
+    this.router.resetConfig(routes);
+
+    this.remotes = Object.values(manifest);
   }
 }
 
