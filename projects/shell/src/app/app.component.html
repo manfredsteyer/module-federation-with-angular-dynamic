@@ -1,7 +1,12 @@
+<!-- projects/shell/src/app/app.component.html -->
+
 <ul>
     <li><img src="../assets/angular.png" width="50"></li>
     <li><a routerLink="/">Home</a></li>
+
+    <!-- Dynamically create menu items for all Micro Frontends -->
     <li *ngFor="let remote of remotes"><a [routerLink]="remote.routePath">{{remote.displayName}}</a></li>
+
     <li><a routerLink="/config">Config</a></li>
 </ul>
 

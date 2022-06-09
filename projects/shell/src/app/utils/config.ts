@@ -1,3 +1,5 @@
+// projects/shell/src/app/utils/config.ts
+
 import { Manifest, RemoteConfig } from "@angular-architects/module-federation";
 
 export type CustomRemoteConfig = RemoteConfig & {

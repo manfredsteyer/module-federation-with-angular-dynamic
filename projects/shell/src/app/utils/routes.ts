@@ -1,3 +1,5 @@
+// projects/shell/src/app/utils/routes.ts
+
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
 import { APP_ROUTES } from '../app.routes';
