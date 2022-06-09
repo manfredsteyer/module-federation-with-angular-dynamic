@@ -10,19 +10,19 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-architects/module-federation-runtime@14.3.3":
-  "integrity" "sha512-Ookeud+eFwc1O82UfAIPDDxYby69OZfrEUWX3yzXcr94FM5k5wJ1dyUJbCbIrvzPNGbU78sNpA60tCe8SneJxg=="
-  "resolved" "https://registry.npmjs.org/@angular-architects/module-federation-runtime/-/module-federation-runtime-14.3.3.tgz"
-  "version" "14.3.3"
+"@angular-architects/module-federation-runtime@14.3.7":
+  "integrity" "sha512-7z6wMTxWeXVzT51xj7NpZRIAmvEDZ13lufo6fX06mBxtM4RnLWp9GsOibTZrSdxxtOJei7d2zLp1qa1pqkuYKA=="
+  "resolved" "https://registry.npmjs.org/@angular-architects/module-federation-runtime/-/module-federation-runtime-14.3.7.tgz"
+  "version" "14.3.7"
   dependencies:
     "tslib" "^2.0.0"
 
-"@angular-architects/module-federation@^14.3.3":
-  "integrity" "sha512-c3ECudlx7uURe8+UBnv1M3sZxJ+pJ3u0BVs5GVx/pFTDcK45u6L9+iOnzrU5g0dMJLLMBJpusBNbWSJluQlH3A=="
-  "resolved" "https://registry.npmjs.org/@angular-architects/module-federation/-/module-federation-14.3.3.tgz"
-  "version" "14.3.3"
+"@angular-architects/module-federation@^14.3.7":
+  "integrity" "sha512-v9I1ZaOHnKTQgssMoCGWBZIuv0YPdyD3N02e3vHDexviIGkhlaKJR2CXqP+7ICNHo3LdOXTPxiEn7j970Y1wIQ=="
+  "resolved" "https://registry.npmjs.org/@angular-architects/module-federation/-/module-federation-14.3.7.tgz"
+  "version" "14.3.7"
   dependencies:
-    "@angular-architects/module-federation-runtime" "14.3.3"
+    "@angular-architects/module-federation-runtime" "14.3.7"
     "@schematics/angular" "^13.0.4"
     "callsite" "^1.0.0"
     "node-fetch" "^2.6.7"

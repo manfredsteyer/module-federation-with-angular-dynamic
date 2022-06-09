@@ -15,5 +15,6 @@
         "titleBar.inactiveBackground": "#7fc9e899",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#7fc9e8"
+    "peacock.color": "#7fc9e8",
+    "angular.enable-strict-mode-prompt": false
 }

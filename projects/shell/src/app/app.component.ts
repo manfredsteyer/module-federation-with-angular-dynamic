@@ -17,7 +17,7 @@ export class AppComponent implements OnInit  {
   }
 
   async ngOnInit(): Promise<void> {
-    const manifest = getManifest() as CustomManifest;
+    const manifest = getManifest<CustomManifest>();
     
     // Hint: Move this to an APP_INITIALIZER 
     //  to avoid issues with deep linking
