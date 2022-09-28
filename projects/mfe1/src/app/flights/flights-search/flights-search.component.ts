@@ -1,4 +1,5 @@
-import {Component, ViewChild, ViewContainerRef, Inject, Injector, ComponentFactoryResolver, OnInit} from '@angular/core';
+import {Component, ViewChild, ViewContainerRef, Inject, Injector} from '@angular/core';
+import { LazyComponent } from '../lazy/lazy.component';
 
 
 @Component({
@@ -7,22 +8,21 @@ import {Component, ViewChild, ViewContainerRef, Inject, Injector, ComponentFacto
 })
 export class FlightsSearchComponent {
 
-  @ViewChild('vc', { read: ViewContainerRef, static: true })
-  viewContainer: ViewContainerRef;
+  @ViewChild('vc', { read: ViewContainerRef, static: true }) viewContainer!: ViewContainerRef;
 
   constructor(
-    @Inject(Injector) private injector,
-    @Inject(ComponentFactoryResolver) private cfr) { }
+    @Inject(Injector) private injector:Injector) { }
 
   search() {
     alert('Not implemented for this demo!');
   }
 
-  async terms() {
-    const comp = await import('../lazy/lazy.component').then(m => m.LazyComponent);
+  terms() : void {
 
-    const factory = this.cfr.resolveComponentFactory(comp);
-    this.viewContainer.createComponent(factory, null, this.injector);
+    this.viewContainer.createComponent(LazyComponent,{
+      index: 0,
+      injector : this.injector
+    })
   }
 
 
