@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
     "types": [],
-    "target": "es2020"
+    "target": "ES2022"
   },
   "files": [
     "src/main.ts",

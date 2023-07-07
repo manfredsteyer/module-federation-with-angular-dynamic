@@ -1,12 +1,15 @@
 import { getManifest, Manifest } from '@angular-architects/module-federation';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CustomManifest, CustomRemoteConfig } from './utils/config';
 import { buildRoutes } from './utils/routes';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: true,
+    imports: [RouterLink, NgFor, RouterOutlet]
 })
 export class AppComponent implements OnInit  {
 
