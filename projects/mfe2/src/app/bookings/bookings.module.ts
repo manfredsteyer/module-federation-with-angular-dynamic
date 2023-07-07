@@ -5,12 +5,10 @@ import { RouterModule } from '@angular/router';
 import { FLIGHTS_ROUTES } from './bookings.routes';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(FLIGHTS_ROUTES)
-  ],
-  declarations: [
-    BookingsSearchComponent
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(FLIGHTS_ROUTES),
+        BookingsSearchComponent
+    ]
 })
 export class BookingsModule { }

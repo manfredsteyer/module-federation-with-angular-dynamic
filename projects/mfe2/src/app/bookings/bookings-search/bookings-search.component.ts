@@ -6,8 +6,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-bookings-search',
-  templateUrl: './bookings-search.component.html',
+    selector: 'app-bookings-search',
+    templateUrl: './bookings-search.component.html',
+    standalone: true,
 })
 export class BookingsSearchComponent {
   @ViewChild('vc', { read: ViewContainerRef, static: true })
